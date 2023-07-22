@@ -10,6 +10,7 @@
 1. First, go to the website [telegram.org](https://my.telegram.org/auth) and log in with your Telegram account credentials.
 
 2. Create a new application to obtain the API ID (`api_id`), API hash (`api_hash`), and application title (`app_title`).
+![API](https://github.com/funykaly/Telegram-clock-bio-V2/blob/main/images/API.png)
 > If you encounter any issues during the application creation, make sure to disable your VPN or ad blocker or use a VPN with an IP that hasn't been used to create an application before.
 
 **Step 2: Register on Replit**
@@ -48,6 +49,7 @@ api_hash = "<api_hash>"
 ```
 
 3. Run the code again, and copy the domain shown in the image below for the next step.
+![API](https://github.com/funykaly/Telegram-clock-bio-V2/blob/main/images/domain.webp)
 
 **Step 5: Connect to the Domain and Display the Clock in Bio**
 
