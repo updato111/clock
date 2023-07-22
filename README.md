@@ -63,3 +63,19 @@ api_hash = "<api_hash>"
 
 5. Now, you can display the clock in your Telegram bio, and the bio will update every minute.
 
+
+## License
+
+This project is licensed under the [BSD-3-Clause License](LICENSE). For more information about the license, please see the [LICENSE](https://github.com/funykaly/Telegram-clock-bio-V2/blob/main/LICENSE) file.
+
+### Note
+
+- Ensure that your Telegram API authentication details are correctly set up in the `config.py` file and never share them with others.
+- This script can run in the background, and due to frequent updates, your Telegram profile might be hidden for an extended period. You can modify the value of `await asyncio.sleep(60)` in the `update_profile` function to change this behavior.
+
+
+### Warning
+
+Continuous and unauthorized use of this script might violate Telegram API terms of service and lead to issues with your account. Please use this script with caution and in compliance with the regulations. The script author bears no responsibility for improper use of this script.
+
+
