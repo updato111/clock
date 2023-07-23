@@ -31,7 +31,7 @@
 
 1. In the `main.py` file, add the line `from keep_alive import keep_alive` at the beginning of the code.
 
-2. Add the `keep_alive()` function call above `<api_id = <api_id` line. The code will look like this:
+2. Add the `keep_alive()` function call above `api_id = <api_id>` line. The code will look like this:
 ```python
 import pytz
 import asyncio
