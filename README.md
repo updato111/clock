@@ -70,7 +70,7 @@ This project is licensed under the [BSD-3-Clause License](LICENSE). For more inf
 
 ### Note
 
-- Ensure that your Telegram API authentication details are correctly set up in the `config.py` file and never share them with others.
+- Ensure that your Telegram API authentication details are correctly set up in the `main.py` file and never share them with others.
 - This script can run in the background, and due to frequent updates, your Telegram profile might be hidden for an extended period. You can modify the value of `await asyncio.sleep(60)` in the `update_profile` function to change this behavior.
 
 
