@@ -19,7 +19,32 @@
 
 2. Create a new Repl and use the "Import from GitHub" option to upload the project files by providing the GitHub link to the project.
 
+>In step 2-1, your repl must be private, and to enable the private option, you need to purchase it. Therefore, it is recommended to use step 2-2, which is completely free.
+
+Step 2-1:
+
 3. Enter the API ID (`api_id`) in line 10, API hash (`api_hash`) in line 11, and application title (`app_title`) in line 22 of the code. Also, specify your country's time zone in line 19 and feel free to modify the bio text in line 27.
+
+or
+
+Step 2-2(recommended):
+
+3. On the Replit website, go to the "Secrets" section and click on "New Secret." Enter "api_id" in the "Key" field and enter your Telegram API ID in the "Value" field. Do the same for "api_hash," and enter your Telegram API hash in the corresponding "Value" field.
+
+4. Add `import os` to the beginning of the code. Now, instead of `api_id = <api_id>`, replace it with `api_id = os.environ['api_id']`, and do the same for `api_hash = "<api_hash>"`.The code will look like this:
+```python
+import os
+import pytz
+import asyncio
+from datetime import datetime
+from telethon import TelegramClient
+from telethon.tl.functions.account import UpdateProfileRequest
+
+
+api_id = os.environ['api_id']
+api_hash = os.environ['api_hash']
+```
+>In method 2-2, you can still customize the time zone, bio text, and app title according to your preferences.
 
 **Step 3: Install Packages and Configure the Package**
 
@@ -27,12 +52,15 @@
 
 2. Except for the "Packages" section in Replit, manually install the `Telethon-repl` package. Wait for the previous packages to be installed automatically before installing this package.
 
+>purchase and enable the "Always On" option for your repl or continue with steps 4 and 5:
+
 **Step 4: Keep the Code Running 24/7**
 
 1. In the `main.py` file, add the line `from keep_alive import keep_alive` at the beginning of the code.
 
 2. Add the `keep_alive()` function call above `api_id = <api_id>` line. The code will look like this:
 ```python
+import os
 import pytz
 import asyncio
 from datetime import datetime
@@ -42,8 +70,8 @@ from telethon.tl.functions.account import UpdateProfileRequest
 
 keep_alive()
 
-api_id = <api_id>
-api_hash = "<api_hash>"
+api_id = os.environ['api_id']
+api_hash = os.environ['api_hash']
 
 # Rest of the code...
 ```
@@ -57,7 +85,7 @@ api_hash = "<api_hash>"
 
 2. Create a new monitor and set the monitor type to "HTTP." Enter a custom name for the monitor.
 
-3. In the URL field, enter the copied domain.
+3. In the URL field, enter the copied domain.(Please make sure to include `https://` before the domain, otherwise the monitor will not be created.)
 
 4. Leave the other settings as they are and create the monitor.
 
