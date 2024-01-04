@@ -7,8 +7,8 @@ from telethon.tl.functions.account import UpdateProfileRequest
 
 
 
-api_id = <api_id>
-api_hash = "<api_hash>"
+api_id = 3547639
+api_hash = "2bf949e553081d817bd484640986c861"
 
 time_texts = {
     1: "🕐", 2: "🕑", 3: "🕒", 4: "🕓", 5: "🕔", 6: "🕕", 7: "🕖", 8: "🕗", 9: "🕘",
@@ -16,10 +16,10 @@ time_texts = {
     18: "🕕", 19: "🕖", 20: "🕗", 21: "🕘", 22: "🕙", 23: "🕚", 0: "🕛"
 }
 
-timezone = pytz.timezone('<your_timezone>')
+timezone = pytz.timezone('Asia/Tehran')
 
 async def update_profile():
-    async with TelegramClient("<app_title>", api_id, api_hash) as client:
+    async with TelegramClient("datatimeviera", api_id, api_hash) as client:
         while True:
             try:
                 now = datetime.now(timezone)
