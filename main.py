@@ -24,7 +24,7 @@ async def update_profile():
             try:
                 now = datetime.now(timezone)
                 hour = now.hour
-                about_text = f"You will see this at {now.strftime('%H:%M')} {time_texts.get(hour, '')}"
+                about_text = f"🦦 {now.strftime('%H:%M')} {time_texts.get(hour, '')}"
 
                 await client(UpdateProfileRequest(about=about_text))
                 await asyncio.sleep(60 - now.second)
